@@ -77,7 +77,7 @@ export function ResultPanel({ onSpectrumComplete }: { onSpectrumComplete: (recor
           <div className="flex gap-3">
             <div className="flex flex-1 items-center justify-between">
               <span className="text-xs font-medium text-text-subtle">Laser</span>
-              <Button variant="primary" className="w-24" onClick={() => setLaserOn((v) => !v)}>
+              <Button variant={laserOn ? "primary" : "danger"} className="w-24" onClick={() => setLaserOn((v) => !v)}>
                 Power {laserOn ? "ON" : "OFF"}
               </Button>
             </div>
