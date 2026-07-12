@@ -11,7 +11,6 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
-  List,
   Pencil,
   RotateCcw,
 } from "lucide-react";
@@ -81,32 +80,22 @@ function CoordinateControls({
             </button>
           </div>
         )}
-        <div className="flex items-end gap-2">
-          <div className="flex flex-1 flex-col gap-2">
-            <span className="text-xs font-medium text-text-subtle">Location</span>
-            <SelectField value={edited ? "New unsaved location*" : locationLabel} warn={edited} className="w-full" />
-            <div className="flex gap-2">
-              <TextField value={locX} onChange={handleLocChange(setLocX)} className="flex-1" />
-              <TextField value={locY} onChange={handleLocChange(setLocY)} className="flex-1" />
-            </div>
-            <div className="flex gap-2 text-xs font-medium text-text-subtle">
-              <div className="flex flex-1 gap-1.5">
-                <span>X</span>
-                <span>999.99999</span>
-              </div>
-              <div className="flex flex-1 gap-1.5">
-                <span>Y</span>
-                <span>999.99999</span>
-              </div>
-            </div>
+        <div className="flex min-w-0 flex-col gap-2">
+          <span className="text-xs font-medium text-text-subtle">Location</span>
+          <SelectField value={edited ? "New unsaved location*" : locationLabel} warn={edited} className="w-full" />
+          <div className="flex gap-2">
+            <TextField value={locX} onChange={handleLocChange(setLocX)} className="min-w-0 flex-1" />
+            <TextField value={locY} onChange={handleLocChange(setLocY)} className="min-w-0 flex-1" />
           </div>
-          <div className="flex flex-col gap-1.5">
-            <button className="flex size-7 items-center justify-center border border-border-default bg-surface-0">
-              <List size={20} className="text-text-subtle" />
-            </button>
-            <button className="flex size-7 items-center justify-center border border-border-default bg-surface-0">
-              <Save size={20} className="text-text-subtle" />
-            </button>
+          <div className="flex gap-2 text-xs font-medium text-text-subtle">
+            <div className="flex flex-1 gap-1.5">
+              <span>X</span>
+              <span>999.99999</span>
+            </div>
+            <div className="flex flex-1 gap-1.5">
+              <span>Y</span>
+              <span>999.99999</span>
+            </div>
           </div>
         </div>
       </div>
