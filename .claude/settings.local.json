@@ -7,7 +7,9 @@
       "Bash(npm install *)",
       "Bash(node -e \"const icons=require\\('lucide-react'\\); console.log\\(['Rows2','Rows3','Rows4','Menu','AlignJustify','List'].map\\(n=>n+': '+\\(n in icons\\)\\).join\\('\\\\n'\\)\\)\")",
       "Bash(npx tsc *)",
-      "Bash(node -e \"const icons=require\\('lucide-react'\\); console.log\\(['Pencil','PencilLine','Copy'].map\\(n=>n+': '+\\(n in icons\\)\\).join\\('\\\\n'\\)\\)\")"
+      "Bash(node -e \"const icons=require\\('lucide-react'\\); console.log\\(['Pencil','PencilLine','Copy'].map\\(n=>n+': '+\\(n in icons\\)\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(gh api *)",
+      "Bash(npm run *)"
     ]
   }
 }

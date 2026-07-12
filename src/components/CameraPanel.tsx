@@ -53,13 +53,13 @@ function CoordinateControls({
           <Radio label="Custom" checked={system === "custom"} onChange={() => setSystem("custom")} />
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-2">
+      <div className="flex min-w-0 flex-1 flex-col gap-2">
         {system === "relative" && (
-          <div className="flex flex-col gap-2">
+          <div className="flex min-w-0 flex-col gap-2">
             <span className="text-xs font-medium text-text-subtle">Origin</span>
-            <div className="flex items-center gap-2">
-              <TextField readOnly value="X 0" className="flex-1" />
-              <TextField readOnly value="Y 2" className="flex-1" />
+            <div className="flex min-w-0 items-center gap-2">
+              <TextField readOnly value="X 0" className="min-w-0 flex-1" />
+              <TextField readOnly value="Y 2" className="min-w-0 flex-1" />
               <button className="flex size-7 shrink-0 items-center justify-center border border-border-default bg-surface-0 text-text-subtle">
                 <RotateCcw size={16} />
               </button>
@@ -67,8 +67,8 @@ function CoordinateControls({
           </div>
         )}
         {system === "custom" && (
-          <div className="flex items-end gap-2">
-            <div className="flex flex-1 flex-col gap-2">
+          <div className="flex min-w-0 items-end gap-2">
+            <div className="flex min-w-0 flex-1 flex-col gap-2">
               <span className="text-xs font-medium text-text-subtle">Custom coordinate</span>
               <SelectField value={edited ? "New unsaved location*" : customLabel} warn={edited} className="w-full" />
             </div>
@@ -117,10 +117,10 @@ export function CameraPanel({ scans }: { scans: ScanRecord[] }) {
 
   return (
     <>
-      <Card className="flex-1 overflow-auto">
-        <CardHeader title="Rough" />
+      <Card className="flex-1 overflow-hidden">
+        <CardHeader title="Movement" />
         <div className="flex min-h-0 flex-1 flex-col gap-3 p-3">
-          <div className="flex items-start gap-1 bg-surface-1 p-1">
+          <div className="flex shrink-0 items-start gap-1 bg-surface-1 p-1">
             <Button variant="ghost" active={view === "camera"} className="flex-1" onClick={() => setView("camera")}>
               Camera view
             </Button>
@@ -128,6 +128,8 @@ export function CameraPanel({ scans }: { scans: ScanRecord[] }) {
               Scanner map
             </Button>
           </div>
+
+          <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto">
 
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
@@ -271,6 +273,7 @@ export function CameraPanel({ scans }: { scans: ScanRecord[] }) {
                 Move
               </Button>
             )}
+          </div>
           </div>
         </div>
       </Card>

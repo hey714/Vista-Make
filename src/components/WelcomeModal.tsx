@@ -10,12 +10,17 @@ export function WelcomeModal({ onDismiss }: { onDismiss: () => void }) {
         </div>
         <p className="text-sm font-medium text-text-subtle">
           This is a prototype of a scan page for a microscope hardware &amp; software demo, built entirely with
-          Claude Code. It&apos;s hosted on GitHub — the repository link will be shared shortly.
+          Claude Code from a high-fidelity Figma design.
         </p>
         <div className="flex gap-2 pt-2">
-          <Button variant="secondary" className="flex-1" disabled>
+          <a
+            href="https://github.com/hey714/Vista-Make"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-7 flex-1 items-center justify-center gap-0.5 border border-button-secondary-outline bg-surface-0 px-2 py-1 text-xs font-semibold whitespace-nowrap text-text-subtle"
+          >
             View on GitHub
-          </Button>
+          </a>
           <Button variant="primary" className="flex-1" onClick={onDismiss}>
             Explore prototype
           </Button>

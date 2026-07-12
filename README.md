@@ -1,32 +1,24 @@
-# React + TypeScript + Vite
+# Vista Make — Scan Page Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Live demo:** https://hey714.github.io/Vista-Make/
 
-Currently, two official plugins are available:
+An interactive front-end prototype of a microscope control application's scan workflow, built from a Figma design and implemented entirely with [Claude Code](https://claude.com/claude-code).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It recreates the "Rough" scan screen of a PiFM/AFM microscopy tool: camera/scanner-map view, coordinate and location controls, live scan pattern configuration (rasterized/spiral), a simulated scan with an animated top-to-bottom heatmap reveal, laser/spectrum controls with a "Take spectrum" flow, and a scan/spectrum history panel with editable notes.
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + TypeScript
+- Vite
+- Tailwind CSS v4
 
-## Expanding the Oxlint configuration
+## Getting started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Deployment
+
+Pushing to `master` builds the app and deploys it to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.

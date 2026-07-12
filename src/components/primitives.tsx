@@ -32,10 +32,12 @@ export function SelectField({
 }) {
   return (
     <div
-      className={`flex h-7 items-center gap-0.5 border border-border-default bg-surface-0 px-2 py-1 ${className}`}
+      className={`flex h-7 min-w-0 items-center gap-0.5 border border-border-default bg-surface-0 px-2 py-1 ${className}`}
     >
       {icon}
-      <span className={`flex-1 px-0.5 text-xs font-medium ${warn ? "text-warning-light" : "text-text-subtle"}`}>
+      <span
+        className={`min-w-0 flex-1 truncate px-0.5 text-xs font-medium ${warn ? "text-warning-light" : "text-text-subtle"}`}
+      >
         {value}
       </span>
       <ChevronDown size={16} className="shrink-0 text-text-subtle" />

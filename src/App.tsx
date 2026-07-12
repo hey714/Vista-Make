@@ -47,7 +47,7 @@ function App() {
 
         <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           <Card className="flex-1 overflow-hidden">
-            <CardHeader title="Rough" />
+            <CardHeader title="Scan" />
             <div className="min-h-0 min-w-0 flex-1 overflow-auto p-3">
               <ChartsPanel onScanComplete={addScan} />
             </div>
